@@ -22,7 +22,7 @@ int main(){
     }
 
     end = clock();
-    printf("\n\n  Tempo de execução: %.4f segundos\n", ((double) (end - start)) / CLOCKS_PER_SEC);
+    printf("\n\n  Tempo de execucao: %.4f segundos\n", ((double) (end - start)) / CLOCKS_PER_SEC);
 
     return 0;
 }
