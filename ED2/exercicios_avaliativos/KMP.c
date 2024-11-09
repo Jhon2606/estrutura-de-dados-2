@@ -21,7 +21,7 @@ int main(){
     }
     return 0;
 }
-void ConstruirPrefixos(char *chave, int m, int *aux){
+void ConstruirPrefixos(const char *chave, int m, int *aux){
     int j = -1;
     aux[0] = j;
 
@@ -43,7 +43,6 @@ int KMP(const char* frase, char* chave){
     int cont = 0;
 
     ConstruirPrefixos(chave, m, aux);
-    cont++;
     int j = -1;
 
     for(int i = 0; i < n; i++){
