@@ -32,9 +32,11 @@ int ForcaBruta(const char* frase, char* chave){
         
         while (j < m && frase[i + j] == chave[j]){
             j++;
-            cont = i + j;
+            cont++;
         }
-        
+        if(j < m){
+        cont++;
+        }
         if(j == m){
             return cont;
         }
