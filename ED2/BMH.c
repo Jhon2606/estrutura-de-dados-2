@@ -67,14 +67,49 @@ int BMHCont(char *T, char *P)
     return ocorr;
 }
 
+int BMH_contador(char *T, char *P)
+{
+    int i, j, k;
+    int n = strlen(T);
+    int m = strlen(P);
+    int d[MAXCHAR];
+    int contador = 0;
+    // Pré-processamento
+    for (j = 0; j < MAXCHAR; j++) {
+        d[j] = m;
+    }
+    for (j = 1; j < m; j++) {
+        d[P[j-1]] = m - j;
+    }
+    i = m;
+    // Busca
+    while (i <= n) {
+        k = i;
+        j = m;
+        while (j > 0) {
+            contador++;
+            if (T[k - 1] != P[j - 1]) {
+                break;
+            }
+            k--;
+            j--;
+        }
+        if (j == 0)
+            return contador;
+        i += d[T[i - 1]];
+    }
+    return contador;
+}
+
+
 int main()
 {
     char texto[] = "aabcacbacbacac";
 	char padrao[] = "cacbac";
 
-    int ocorr;
+    int comp;
 
-    ocorr = BMH(texto, padrao);
-    printf("Casamento na posição: %d \n", ocorr);
+    comp = BMH_contador(texto, padrao);
+    printf("Numero de comparações %d \n", comp);
     return 0;
 }
