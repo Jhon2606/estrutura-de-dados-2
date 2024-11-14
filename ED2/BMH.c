@@ -101,7 +101,6 @@ int BMH_contador(char *T, char *P)
     return contador;
 }
 
-
 int main()
 {
     char texto[] = "aabcacbacbacac";
