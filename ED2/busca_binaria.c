@@ -32,8 +32,10 @@ int buscaBinaria(int V[], int tamanho, int K){
     int direita = tamanho - 1;
     while(esquerda <= direita){
         int meio = (direita + esquerda)/2;
+        //e K < V[meio]: O valor buscado está à esquerda. Ajuste o índice da direita
         if(K  < V[meio]){
             direita = meio - 1;
+        //Se K > V[meio]: O valor buscado está à direita. Ajuste o índice da esquerda
         }else if(K > V[meio]){
             esquerda = meio + 1;
         }else{
