@@ -1,0 +1,3 @@
+// Pior caso para KMP: O padrão possui muitos prefixos que são também sufixos, forçando o algoritmo a retroceder várias vezes antes de encontrar a correspondência. Exemplo: Texto: "aaaaaaaaaaaaaaaaab", Padrão: "aaaaaaaab".
+// Pior caso para BMH: O padrão possui caracteres repetidos e o último caractere do padrão aparece frequentemente no texto, resultando em deslocamentos mínimos. Exemplo: Texto: "aaaaaaaaaaaaaaaaab", Padrão: "aaaaaaaab".
+// Pior caso para Força Bruta: O texto possui partes repetitivas e o padrão é quase igual ao texto, mas há desajustes frequentes no final do padrão, forçando o algoritmo a reiniciar a busca em quase todas as posições. Exemplo: Texto: "aaaaaaaaaaaaaaaaab", Padrão: "aaaaaaaab".
