@@ -12,7 +12,7 @@ int main(){
     if(result != -1){
         printf("Valor %d encontrado na posicao %d com %d comparacoes\n", K, result, cont);
     }else {
-        printf("Valor %d nao encontrado após %d comparacoes\n", K, cont);
+        printf("Valor %d nao encontrado apos %d comparacoes\n", K, cont);
     }
     return 0;
 }
